@@ -25,8 +25,6 @@ public class CukesRunner {
     @BeforeClass
     public static void setUp() {
         SetLaunchPortalTestsProperties myTestProperties = new SetLaunchPortalTestsProperties();
-        myTestProperties.initialiseTestProperties();
-        myTestProperties.initialiseLog4jProperties();
         props = myTestProperties.getTestProperties();
         logger = myTestProperties.getLogger();
         driver = new FirefoxDriver();
