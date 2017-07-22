@@ -18,7 +18,7 @@ public class SetLaunchPortalTestsProperties {
         try {
 
             // load the properties file
-            input = new FileInputStream("LaunchPortalTests.properties");
+            input = new FileInputStream("src/test/resources/LaunchPortalTests.properties");
             properties.load(input);
 
             // add properties to propsToReturn HashMap
@@ -45,7 +45,7 @@ public class SetLaunchPortalTestsProperties {
         try {
 
             // load the properties file
-            input = new FileInputStream("log4j.properties");
+            input = new FileInputStream("src/test/resources/log4j.properties");
             properties.load(input);
 
 
