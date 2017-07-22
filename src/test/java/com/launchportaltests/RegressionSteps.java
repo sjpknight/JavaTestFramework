@@ -24,6 +24,12 @@ public class RegressionSteps extends CukesRunner {
     @Then("^I see I am logged into the administrator console$")
     public void i_see_I_am_logged_into_the_administrator_console() throws Throwable {
         String pageTitle = driver.getTitle();
+        String pageHeader = driver.findElement(By.cssSelector("tr.header > td:nth-of-type(1)")).getText();
+        String addApplicationLink = driver.findElement(By.cssSelector("tbody > tr:nth-of-type(3) > td.adminlink > a")).getText();
+        String viewApplicationLink = driver.findElement(By.cssSelector("tbody > tr:nth-of-type(4) > td.adminlink > a")).getText();
         assertThat(pageTitle).isEqualToIgnoringCase("Launch Admin");
+        assertThat(pageHeader).isEqualToIgnoringCase("Launch Administration Control Panel");
+        assertThat(addApplicationLink).isEqualToIgnoringCase("Add Application");
+        assertThat(viewApplicationLink).isEqualToIgnoringCase("View Applications");
     }
 }
